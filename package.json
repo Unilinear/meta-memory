@@ -1,0 +1,34 @@
+{
+  "name": "meta-memory-skill",
+  "version": "0.1.0",
+  "description": "Agent Skill for two-stage brief/full meta-memory in research and coding workflows.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "meta-memory-install": "./scripts/meta-memory-install.js"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "SKILL.md",
+    "skills/",
+    "scripts/meta-memory-install.js"
+  ],
+  "keywords": [
+    "agent-skills",
+    "skill",
+    "meta-memory",
+    "pi-package",
+    "pi-agent",
+    "claude-code",
+    "codex"
+  ],
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
