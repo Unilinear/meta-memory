@@ -1,6 +1,6 @@
 ---
 name: meta-memory
-description: Builds and uses a two-stage brief/full meta-memory system for agentic research and coding workflows. Use when completed work, paper reading, experiments, plans, or conversation segments become disentangled enough to capture as durable memory without carrying full context. With automation hooks for *offloaded* memory work and rules for deciding when to expand from brief to full memory.
+description: Builds and uses a two-stage brief/full meta-memory system for agentic research and coding workflows. Use when completed work, paper reading, experiments, plans, or conversation segments become disentangled enough to capture as durable memory without carrying full context.
 ---
 
 # Meta-Memory Skill for Agent
