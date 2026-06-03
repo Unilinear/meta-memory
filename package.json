@@ -2,7 +2,6 @@
   "name": "meta-memory-skill",
   "version": "0.4.0",
   "description": "Agent Skill for two-stage brief/full meta-memory in research and coding workflows.",
-  "license": "MIT",
   "type": "module",
   "bin": {
     "meta-memory-install": "./scripts/meta-memory-install.js"
