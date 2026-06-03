@@ -1,6 +1,5 @@
-# Meta-Memory
+# **Make memory work like skills.**
 
-**Make memory work like skills.**
 
 Meta-Memory is an Agent Skill for keeping durable memory outside the active context window.
 
