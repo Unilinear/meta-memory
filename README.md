@@ -1,14 +1,12 @@
-# **Let your Agent memorize like "Skills"**
+# **Make memory work like skills.**
 
+Meta-Memory turns project memory into portable skill-like files:
 
-Meta-Memory is an Agent Skill for keeping durable memory outside the active context window.
+- **Skill-shaped memory** — brief notes load first; full notes load only when needed.
+- **More attention space** — trade cheap file space for precious context length.
+- **Portable by default** — when you leave any harness, good or bad, take your memory with you.
 
-It uses two layers:
-
-- **Brief memory** — small, attention-ready recall handles.
-- **Full memory** — detailed notes, evidence, excerpts, code anchors, and open questions.
-
-Use it when completed work, research notes, experiments, plans, design decisions, or conversation segments become clear enough to store without carrying all context forward.
+Use it for completed work, research notes, experiments, plans, design decisions, and reusable conversation context.
 
 ## Install from npm
 
