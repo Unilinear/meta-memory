@@ -10,6 +10,25 @@ maybe good for human too : D
 
 ---
 
+## Memory looks like this:
+
+```text
+<memory-root>/
+├── index.md
+└── units/
+    ├── <verb>-<adjective>-<noun>.unit/
+    ├── read-deeplearning-paper.unit/
+    │   ├── transformer-attention.brief.md
+    │   ├── transformer-attention.full.md
+    │   ├── diffusion-survey.brief.md
+    │   └── diffusion-survey.full.md
+    └── run-baseline-experiment.unit/
+        ├── first-clean-run.brief.md
+        └── first-clean-run.full.md
+```
+
+---
+
 ## Install
 
 Too much big-company plugin platforms make it complicated.
