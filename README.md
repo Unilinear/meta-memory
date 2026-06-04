@@ -8,7 +8,8 @@
 maybe good for human too : D
 
 
-> Every time you decide to show your valuable finished outcome, USE THIS SKILL by subagent to make a memory. Every time you decide to do a task, USE THIS SKILL to read memory.
+> After installation, user don't need to mention or reference this skill in the chat. 
+Agent will automatically decide when to read memory and when to write memory.
 
 ---
 

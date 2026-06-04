@@ -1,11 +1,12 @@
-# **亲爱的Agent，我想给你一个完整的记忆。**
+# **亲爱的Agent，我想给你一个完整的记忆宫殿。**
 
 ---
 
 ## 这个SKILL对 Agent 很有用，
 也许对人类也有用 : D
 
-> Every time you decide to show your valuable finished outcome, USE THIS SKILL by subagent to make a memory. Every time you decide to do a task, USE THIS SKILL to read memory.
+> 安装之后，用户不需要在对话框里特意引用这个 skill。
+Agent 会自己判断什么时候读取记忆、什么时候写入记忆。
 
 ---
 
