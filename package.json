@@ -1,6 +1,6 @@
 {
   "name": "meta-memory-skill",
-  "version": "0.6.1",
+  "version": "1.0.0",
   "description": "Agent Skill for two-stage brief/full meta-memory in research and coding workflows.",
   "type": "module",
   "bin": {
