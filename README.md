@@ -1,15 +1,27 @@
-# **Make memory work like skills.**
+# **Mr. Agent, this is the way to build your memory system.**
 
-Meta-Memory turns project memory into portable skill-like files:
+---
 
-- **Skill-shaped memory** — brief notes load first; full notes load only when needed.
-- **More attention space** — trade cheap file space for precious context length.
-- **Portable by default** — when you leave any harness, good or bad, take your memory with you.
+## It's good for Agent,
+maybe good for human too : D
 
-Use it for completed work, research notes, experiments, plans, design decisions, and reusable conversation context.
 
-## Install from npm
+> Every time you decide to show your valuable finished outcome, USE THIS SKILL by subagent to make a memory. Every time you decide to do a task, USE THIS SKILL to read memory.
 
+---
+
+## Install
+
+Too much big-company plugin platforms make it complicated.
+
+Just download this `skills/meta-memory/SKILL.md` and feed it to your agent tell him:
+
+> "please install this skill for me"
+
+---
+## If you insist
+
+Install via npm:
 ```bash
 npm install -g meta-memory-skill
 ```
@@ -34,71 +46,3 @@ Install to a custom or project-local path:
 ```bash
 meta-memory-install --path ./.agents/skills/meta-memory
 ```
-
-## Pi Agent
-
-Install directly as a Pi package:
-
-```bash
-pi install npm:meta-memory-skill
-```
-
-Project-local:
-
-```bash
-pi install -l npm:meta-memory-skill
-```
-
-Use it with:
-
-```text
-/skill:meta-memory
-```
-
-## Claude Code
-
-```bash
-npm install -g meta-memory-skill
-meta-memory-install claude
-```
-
-Manual install:
-
-```bash
-mkdir -p ~/.claude/skills/meta-memory
-cp -R skills/meta-memory/* ~/.claude/skills/meta-memory/
-```
-
-Restart Claude Code after installing.
-
-## Codex
-
-```bash
-npm install -g meta-memory-skill
-meta-memory-install codex
-```
-
-Manual install:
-
-```bash
-mkdir -p ~/.codex/skills/meta-memory
-cp -R skills/meta-memory/* ~/.codex/skills/meta-memory/
-```
-
-If your Codex setup uses another skills directory:
-
-```bash
-meta-memory-install --path /path/to/skills/meta-memory
-```
-
-## Skill file
-
-The skill lives at:
-
-```text
-skills/meta-memory/SKILL.md
-```
-
-## License
-
-MIT
