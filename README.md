@@ -1,5 +1,7 @@
 # **Mr. Agent, this is the way to build your memory system.**
 
+[简体中文](./README.zh-CN.md)
+
 ---
 
 ## It's good for Agent,
