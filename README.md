@@ -16,7 +16,9 @@ maybe good for human too : D
 <memory-root>/
 ├── index.md
 └── units/
-    ├── <verb>-<adjective>-<noun>.unit/
+    ├── <verb>-<adjective-or-modifier>-<noun>.unit/
+    │   ├── <title>.brief.md
+    │   └── <title>.full.md
     ├── read-deeplearning-paper.unit/
     │   ├── transformer-attention.brief.md
     │   ├── transformer-attention.full.md
