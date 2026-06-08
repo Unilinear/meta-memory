@@ -17,16 +17,16 @@ Agent 会自己判断什么时候读取记忆、什么时候写入记忆。
 ├── index.md
 └── units/
     ├── <动词>-<形容词或修饰语>-<名词>.unit/
-    │   ├── <标题>.brief.md
-    │   └── <标题>.full.md
+    │   ├── <序号>.<标题>.brief.md
+    │   └── <序号>.<标题>.full.md
     ├── 读-AI-文章.unit/
-    │   ├── transformer-attention.brief.md
-    │   ├── transformer-attention.full.md
-    │   ├── diffusion-survey.brief.md
-    │   └── diffusion-survey.full.md
+    │   ├── 0.transformer-attention.brief.md
+    │   ├── 0.transformer-attention.full.md
+    │   ├── 1.diffusion-survey.brief.md
+    │   └── 1.diffusion-survey.full.md
     └── 跑-基线-实验.unit/
-        ├── first-clean-run.brief.md
-        └── first-clean-run.full.md
+        ├── 0.first-clean-run.brief.md
+        └── 0.first-clean-run.full.md
 ```
 
 - `index.md`：记忆索引，方便快速检索。

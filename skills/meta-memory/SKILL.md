@@ -1,8 +1,7 @@
 ---
 name: meta-memory
-description: Build agent memory system. Every time you decide to show your valuable finished outcome, USE THIS SKILL by subagent to make a memory. Every time you decide to do a task, USE THIS SKILL to read memory.
+description: Build agent memory system. Every time you decide to show your valuable finished outcome, USE THIS SKILL to make a memory (can be done by subagent if possible). Every time you decide to do a task, USE THIS SKILL to read memory.
 ---
-
 # Meta-Memory Skill for Agent
 
 Use this skill to keep agent context clean by storing durable memory as files:
@@ -40,7 +39,7 @@ Do not memorize yet when:
 - the memory would be only a vague transcript or mood
 - the useful next action is still changing every few messages
 
-A unit is not necessarily one memory record. A unit is a flat workspace/category of work. For example, `read-deeplearning-paper.unit/` may contain many reading experiences, each with its own `<record-name>.brief.md` and `<record-name>.full.md` pair.
+A unit is not necessarily one memory record. A unit is a flat workspace/category of work. For example, `read-deeplearning-paper.unit/` may contain many reading experiences, each with its own indexed `<record-index>.<record-name>.brief.md` and `<record-index>.<record-name>.full.md` pair.
 
 Do not force highly nonlinear or still-entangled reasoning into a new hierarchy. Keep units flat and let `index.md` carry the evolving nonlinear storyline.
 
@@ -55,13 +54,13 @@ Memory is organized like a skill system: each unit gets a folder under `units/`,
 ├── index.md
 └── units/
     ├── read-deeplearning-paper.unit/
-    │   ├── transformer-attention.brief.md
-    │   ├── transformer-attention.full.md
-    │   ├── diffusion-survey.brief.md
-    │   └── diffusion-survey.full.md
+    │   ├── 0.transformer-attention.brief.md
+    │   ├── 0.transformer-attention.full.md
+    │   ├── 1.diffusion-survey.brief.md
+    │   └── 1.diffusion-survey.full.md
     └── run-baseline-experiment.unit/
-        ├── first-clean-run.brief.md
-        └── first-clean-run.full.md
+        ├── 0.first-clean-run.brief.md
+        └── 0.first-clean-run.full.md
 ```
 
 No `syntheses/` directory is part of the core design. Cross-unit and nonlinear synthesis belongs in `index.md`.
@@ -104,12 +103,14 @@ If the current work does not fit an existing unit, create a new strictly named u
 
 ## Memory record naming rules
 
-Inside a unit, create one named brief/full pair per disentangled memory record:
+Inside a unit, create one indexed named brief/full pair per disentangled memory record:
 
 ```text
-units/<unit-name>.unit/<record-name>.brief.md
-units/<unit-name>.unit/<record-name>.full.md
+units/<unit-name>.unit/<record-index>.<record-name>.brief.md
+units/<unit-name>.unit/<record-index>.<record-name>.full.md
 ```
+
+`<record-index>` is a zero-based integer local to the unit (`0`, `1`, `2`, ...). Use the next unused index in that unit so files sort in creation/order-of-work sequence. Keep the same index on the `.brief.md` and `.full.md` pair.
 
 `<record-name>` should be short, semantic, lowercase kebab-case. It does not need to follow the strict three-token unit rule. It should distinguish multiple memories inside the same unit, such as `transformer-attention`, `failed-batchnorm-run`, or `api-routing-decision`.
 
@@ -126,7 +127,7 @@ Use it to record:
 - important tensions, decisions, stale areas, and next retrieval hints
 - links to important brief files when useful
 
-When work is nonlinear, update the relevant storyline in `index.md` instead of creating nested folders or synthesis layers. Trust future agents to use `index.md` plus unit/file names to decide what to open.
+Always updating `index.md` when new memory was maded.  Trust future agents to use `index.md` plus unit/file names to decide what to open.
 
 ### Context-saving recall protocol
 
@@ -142,16 +143,16 @@ After learning something that changes the memory map or storyline, update `index
 
 ## Brief file format
 
-Use this format for `units/<unit-name>.unit/<record-name>.brief.md`:
+Use this format for `units/<unit-name>.unit/<record-index>.<record-name>.brief.md`:
 
 ```markdown
 ---
-id: <record-name>
+id: <record-index>.<record-name>
 unit: <unit-name>
 title: <title>
 type: paper | code | experiment | conversation | concept | decision | other
 status: seed | active | mature | stale
-full: <record-name>.full.md
+full: <record-index>.<record-name>.full.md
 tags: [tag-one, tag-two]
 updated: YYYY-MM-DD
 ---
@@ -169,27 +170,27 @@ updated: YYYY-MM-DD
 
 ## Relations
 - Index storyline: <index heading or short description>
-- Related records: [<other-record>](<other-record>.brief.md) or [<other-unit>/<record>](../<other-unit>.unit/<record>.brief.md)
+- Related records: [<other-record>](<other-index>.<other-record>.brief.md) or [<other-unit>/<record>](../<other-unit>.unit/<other-index>.<record>.brief.md)
 - Depends on / supersedes / conflicts with: <links if any>
 
 ## When to expand
 <Concrete triggers for reading the full note.>
 
 ## Links
-- Full: [<record-name>.full.md](<record-name>.full.md)
+- Full: [<record-index>.<record-name>.full.md](<record-index>.<record-name>.full.md)
 - Source: <path/session/paper/url>
 ```
 
 ## Full file format
 
-Use this format for `units/<unit-name>.unit/<record-name>.full.md`:
+Use this format for `units/<unit-name>.unit/<record-index>.<record-name>.full.md`:
 
 ```markdown
 ---
-id: <record-name>
+id: <record-index>.<record-name>
 unit: <unit-name>
 title: <title>
-brief: <record-name>.brief.md
+brief: <record-index>.<record-name>.brief.md
 source: <path/session/paper/url>
 updated: YYYY-MM-DD
 ---

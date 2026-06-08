@@ -20,16 +20,16 @@ Agent will automatically decide when to read memory and when to write memory.
 ├── index.md
 └── units/
     ├── <verb>-<adjective-or-modifier>-<noun>.unit/
-    │   ├── <title>.brief.md
-    │   └── <title>.full.md
+    │   ├── <index>.<title>.brief.md
+    │   └── <index>.<title>.full.md
     ├── read-deeplearning-paper.unit/
-    │   ├── transformer-attention.brief.md
-    │   ├── transformer-attention.full.md
-    │   ├── diffusion-survey.brief.md
-    │   └── diffusion-survey.full.md
+    │   ├── 0.transformer-attention.brief.md
+    │   ├── 0.transformer-attention.full.md
+    │   ├── 1.diffusion-survey.brief.md
+    │   └── 1.diffusion-survey.full.md
     └── run-baseline-experiment.unit/
-        ├── first-clean-run.brief.md
-        └── first-clean-run.full.md
+        ├── 0.first-clean-run.brief.md
+        └── 0.first-clean-run.full.md
 ```
 
 ---
